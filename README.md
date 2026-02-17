@@ -2,6 +2,8 @@
 📊 Dynamic Survey Builder
 
 Sistema de Creación Dinámica de Encuestas
+
+
 ---
 👥 Miembros del equipo
 
@@ -12,6 +14,8 @@ Martinez Rendon Arizbeth
 Gil Guzman Guillermo
 
 Rueda Jaime Maria Argel
+
+
 ---
 🛠️ Roles del equipo
 
@@ -22,6 +26,8 @@ Guillermo – Query Developer
 Argel – Integration
 
 Arizbeth – Data Seeder / QA
+
+
 ---
 📌 Descripción del proyecto
 
@@ -37,6 +43,8 @@ Registrar respuestas de los usuarios.
 Generar resultados y análisis de datos.
 
 El sistema permitirá almacenar y organizar la información de manera estructurada, garantizando integridad, eficiencia y escalabilidad.
+
+
 ---
 🎯 Objetivo general
 
@@ -57,6 +65,8 @@ Registrar respuestas de los usuarios.
 Desarrollar consultas para análisis de resultados.
 
 Integrar la base de datos con el sistema de aplicación.
+
+
 ---
 💡 Justificación
 
