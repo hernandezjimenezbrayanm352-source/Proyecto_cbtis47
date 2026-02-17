@@ -17,3 +17,22 @@
     ]
   }
 }
+{
+  "personalInformation": {
+    "firstName": "Arizbeth",
+    "lastName": "Martínez Rendón",
+    "address": "sanI",
+    "age": 18,
+    "dateOfBirth": "2009-09-14",
+    "hobbies": "sports",[
+      "Reading",
+      "Playing soccer",
+      "Coding"
+    ],
+    "friends": [
+      "Arizbeth",
+      "Argel",
+      "Guillermo"
+    ]
+  }
+}
