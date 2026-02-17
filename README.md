@@ -5,6 +5,8 @@ Sistema de Creación Dinámica de Encuestas
 
 
 ---
+
+
 👥 Miembros del equipo
 
 Hernandez Jimenez Brayan
@@ -17,6 +19,8 @@ Rueda Jaime Maria Argel
 
 
 ---
+
+
 🛠️ Roles del equipo
 
 Brayan – Data Modeler
@@ -29,6 +33,8 @@ Arizbeth – Data Seeder / QA
 
 
 ---
+
+
 📌 Descripción del proyecto
 
 Dynamic Survey Builder es un sistema diseñado para la creación y gestión dinámica de encuestas.
@@ -46,12 +52,16 @@ El sistema permitirá almacenar y organizar la información de manera estructura
 
 
 ---
+
+
 🎯 Objetivo general
 
 Diseñar e implementar una base de datos relacional que permita la creación, administración y análisis de encuestas dinámicas, asegurando integridad y organización adecuada de la información.
 
 
 ---
+
+
 📌 Objetivos específicos
 
 Diseñar el modelo entidad-relación del sistema.
@@ -68,6 +78,8 @@ Integrar la base de datos con el sistema de aplicación.
 
 
 ---
+
+
 💡 Justificación
 
 Muchas encuestas se gestionan mediante herramientas limitadas o poco flexibles.
