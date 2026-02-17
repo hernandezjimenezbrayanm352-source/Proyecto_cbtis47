@@ -1,3 +1,19 @@
-name:
-lastname:
-
+{
+  "personalInformation": {
+    "firstName": "Brayan",
+    "lastName": "Hernandez Jimenez",
+    "address": "calle 31 bis",
+    "age": 18,
+    "dateOfBirth": "2008-02-16",
+    "hobbies": [
+      "Reading",
+      "Playing soccer",
+      "Coding"
+    ],
+    "friends": [
+      "Arizbeth",
+      "Argel",
+      "Guillermo"
+    ]
+  }
+}
