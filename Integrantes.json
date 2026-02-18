@@ -52,3 +52,22 @@
     ]
   }
 }
+{
+  "personalInformation": {
+    "firstName": "María Argel",
+    "lastName": "Rueda Jaime",
+    "address": "colonia paraíso",
+    "age": 16,
+    "dateOfBirth": "2009-04-07",
+    "hobbies": [
+      "Reading",
+      "Playing soccer",
+      "Coding"
+    ],
+    "friends": [
+      "Arizbeth",
+      "Argel",
+      "Brayan"
+    ]
+  }
+}
