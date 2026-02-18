@@ -1,1 +1,19 @@
-hoa
+{
+  "personalInformation": {
+    "firstName": "Guillermo",
+    "lastName": "Gil Guzmán ",
+    "address": "Maz3 Lote 13 Jardines del sur ",
+    "age": 16,
+    "dateOfBirth": "2009-10-29",
+    "hobbies": [
+      "play soccer",
+      "Play PS5",
+      "Listen to music"
+    ],
+    "friends": [
+      "Arizbeth",
+      "Argel",
+      "Brayan"
+    ]
+  }
+} 
