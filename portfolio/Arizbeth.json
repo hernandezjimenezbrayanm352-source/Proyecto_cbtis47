@@ -1,1 +1,17 @@
-.
+{
+  "personalInformation": {
+    "firstName": "Arizbeth",
+    "lastName": "Martínez Rendón",
+    "address": "sanI",
+    "age": 16,
+    "dateOfBirth": "2009-09-14",
+    "hobbies": "sports",[
+    ],
+     "friends": [
+      "firstName": "Isabel",
+    "lastName": "Baigen Jarillo",
+    "address": "chocaman",
+    "age": 16,
+    "dateOfBirth": "2009-10-19",
+    "hobbies": "eat",[
+    ]
