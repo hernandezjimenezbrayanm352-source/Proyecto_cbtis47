@@ -1,14 +1,45 @@
 classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
+
+Survey "1" *-- "many" Question : contains
+Question "1" *-- "many" Option : has
+Survey "1" o-- "many" Response : collects
+Response "1" *-- "many" Answer : includes
+User "1" --> "many" Response : submits
+
+class Survey {
+  +String surveyId
+  +String title
+  +String description
+  +Date createdAt
+  +Boolean isActive
+}
+
+class Question {
+  +String questionId
+  +String text
+  +String type
+  +Boolean required
+}
+
+class Option {
+  +String optionId
+  +String text
+  +Boolean isCorrect
+}
+
+class Response {
+  +String responseId
+  +Date submittedAt
+  +Number score
+}
+
+class Answer {
+  +String questionId
+  +String selectedOptionId
+}
+
+class User {
+  +String userId
+  +String name
+  +String email
+}
