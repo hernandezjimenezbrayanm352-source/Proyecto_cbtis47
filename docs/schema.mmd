@@ -1,23 +1,50 @@
-classDiagram
+erDiagram
 
-Survey "1" *-- "many" Question : contiene
-Question "1" *-- "many" Option : tiene
-Survey "1" o-- "many" Response : recibe
-Response "1" *-- "many" Answer : incluye
+SURVEY ||--o{ QUESTION : contiene
+QUESTION ||--o{ OPTION : tiene
+SURVEY ||--o{ RESPONSE : recibe
+RESPONSE ||--o{ ANSWER : incluye
+QUESTION ||--o{ ANSWER : es_contestada
 
-class Survey {
-  +String surveyId
-  +String titulo
-  +String tema
-  +String grado
-  +Boolean activa
+SURVEY {
+  string survey_id PK
+  string titulo
+  string tema
+  string grado
+  boolean activa
 }
 
-class Question {
-  +String questionId
-  +String enunciado
-  +String tipo
-  +Number puntos
+QUESTION {
+  string question_id PK
+  string enunciado
+  string tipo
+  int puntos
+  boolean obligatoria
+  string survey_id FK
+}
+
+OPTION {
+  string option_id PK
+  string texto
+  boolean es_correcta
+  string question_id FK
+}
+
+RESPONSE {
+  string response_id PK
+  string nombre_alumno
+  date fecha_entrega
+  int calificacion_total
+  string survey_id FK
+}
+
+ANSWER {
+  string answer_id PK
+  string opcion_seleccionada
+  boolean es_correcta
+  string question_id FK
+  string response_id FK
+}
   +Boolean obligatoria
 }
 
