@@ -1,45 +1,41 @@
 classDiagram
 
-Survey "1" *-- "many" Question : contains
-Question "1" *-- "many" Option : has
-Survey "1" o-- "many" Response : collects
-Response "1" *-- "many" Answer : includes
-User "1" --> "many" Response : submits
+Survey "1" *-- "many" Question : contiene
+Question "1" *-- "many" Option : tiene
+Survey "1" o-- "many" Response : recibe
+Response "1" *-- "many" Answer : incluye
 
 class Survey {
   +String surveyId
-  +String title
-  +String description
-  +Date createdAt
-  +Boolean isActive
+  +String titulo
+  +String tema
+  +String grado
+  +Boolean activa
 }
 
 class Question {
   +String questionId
-  +String text
-  +String type
-  +Boolean required
+  +String enunciado
+  +String tipo
+  +Number puntos
+  +Boolean obligatoria
 }
 
 class Option {
   +String optionId
-  +String text
-  +Boolean isCorrect
+  +String texto
+  +Boolean esCorrecta
 }
 
 class Response {
   +String responseId
-  +Date submittedAt
-  +Number score
+  +String nombreAlumno
+  +Date fechaEntrega
+  +Number calificacionTotal
 }
 
 class Answer {
   +String questionId
-  +String selectedOptionId
-}
-
-class User {
-  +String userId
-  +String name
-  +String email
+  +String opcionSeleccionada
+  +Boolean esCorrecta
 }
