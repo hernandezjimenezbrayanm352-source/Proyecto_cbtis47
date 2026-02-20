@@ -45,24 +45,3 @@ ANSWER {
   string question_id FK
   string response_id FK
 }
-  +Boolean obligatoria
-}
-
-class Option {
-  +String optionId
-  +String texto
-  +Boolean esCorrecta
-}
-
-class Response {
-  +String responseId
-  +String nombreAlumno
-  +Date fechaEntrega
-  +Number calificacionTotal
-}
-
-class Answer {
-  +String questionId
-  +String opcionSeleccionada
-  +Boolean esCorrecta
-}
