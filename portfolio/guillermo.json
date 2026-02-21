@@ -9,11 +9,29 @@
       "play soccer",
       "Play PS5",
       "Listen to music"
-    ],
+        ],
     "friends": [
-      "Arizbeth",
-      "Argel",
-      "Brayan"
+      "firstName": "Juan Irving ",
+    "lastName": "De la cruz Zayas ",
+    "address": "Palomar ",
+    "age": 16,
+    "dateOfBirth": "2009-03-22",
+    "hobbies": "play soccer",[
     ]
-  }
-} 
+ "friends": [
+      "firstName": "Emanuel ",
+    "lastName": "Zepagua Cervantes ",
+    "address": "Jardines del sur",
+    "age": 16,
+    "dateOfBirth": "2009-07-12",
+    "hobbies": "Listen to music",[
+    ]
+ "friends": [
+      "firstName": "Buenis",
+    "lastName": "Tristan Zúñiga",
+    "address": "Bodega aurrera",
+    "age": 16,
+    "dateOfBirth": "2009-11-08",
+    "hobbies": "play soccer",[
+    ]
+{
