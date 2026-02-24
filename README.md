@@ -7,7 +7,7 @@ Sistema de Creación Dinámica de Encuestas
 ---
 
 
-👥 Miembros del equipo
+👥 Miembros del equipo (equipo 9)
 
 Hernandez Jimenez Brayan
 
