@@ -13,5 +13,16 @@
     "name": "Carlos Ramírez",
     "email": "carlos3@example.com",
     "active": true
-  }
+  },
+  {
+    "name": "Damian Hernández",
+    "email": "damhdz@example.com",
+    "active": true
+  },
+    {
+    "name": "Roberto Domínguez",
+    "email": "domiRober@example.com",
+    "active": true
+  },
+
 ]
