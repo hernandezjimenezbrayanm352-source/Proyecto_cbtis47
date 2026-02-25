@@ -1,1 +1,17 @@
-.
+[
+  {
+    "name": "Juan Ramírez",
+    "email": "juan1@example.com",
+    "active": true
+  },
+  {
+    "name": "María López",
+    "email": "maria2@example.com",
+    "active": false
+  },
+  {
+    "name": "Carlos Ramírez",
+    "email": "carlos3@example.com",
+    "active": true
+  }
+]
