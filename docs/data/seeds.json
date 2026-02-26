@@ -102,6 +102,3 @@ db.answers.insertMany([
     question_id: "Q2",
     response_id: "R2"
   }
-])
-
-print("Survey seeding completed successfully!")
