@@ -1,228 +1,107 @@
-[
-  {
-    "name": "Juan Ramírez",
-    "email": "juan1@example.com",
-    "active": true
-  },
-  {
-    "name": "María López",
-    "email": "maria2@example.com",
-    "active": false
-  },
-  {
-    "name": "Carlos Ramírez",
-    "email": "carlos3@example.com",
-    "active": true
-  },
-  {
-    "name": "Damian Hernández",
-    "email": "damhdz@example.com",
-    "active": true
-  },
-    {
-    "name": "Roberto Domínguez",
-    "email": "domiRober@example.com",
-    "active": true
-  },
-{
-    "name": "Andrea Castillo",
-    "email": "andrea6@example.com",
-    "active": true
-  },
-  {
-    "name": "Luis Mendoza",
-    "email": "luis7@example.com",
-    "active": false
-  },
-  {
-    "name": "Fernanda Ruiz",
-    "email": "fernanda8@example.com",
-    "active": true
-  },
-  {
-    "name": "Jorge Herrera",
-    "email": "jorge9@example.com",
-    "active": true
-  },
-  {
-    "name": "Paola Vargas",
-    "email": "paola10@example.com",
-    "active": false
-  },
-  {
-    "name": "Ricardo Morales",
-    "email": "ricardo11@example.com",
-    "active": true
-  },
-  {
-    "name": "Daniela Flores",
-    "email": "daniela12@example.com",
-    "active": true
-  },
-  {
-    "name": "Miguel Torres",
-    "email": "miguel13@example.com",
-    "active": false
-  },
-  {
-    "name": "Valeria Navarro",
-    "email": "valeria14@example.com",
-    "active": true
-  },
-  {
-    "name": "Sergio Rojas",
-    "email": "sergio15@example.com",
-    "active": true
-  },
-  {
-    "name": "Natalia Cruz",
-    "email": "natalia16@example.com",
-    "active": false
-  },
-  {
-    "name": "Eduardo Paredes",
-    "email": "eduardo17@example.com",
-    "active": true
-  },
-  {
-    "name": "Camila Ortega",
-    "email": "camila18@example.com",
-    "active": true
-  },
-  {
-    "name": "Héctor Salazar",
-    "email": "hector19@example.com",
-    "active": false
-  },
-  {
-    "name": "Alejandra Peña",
-    "email": "alejandra20@example.com",
-    "active": true
-  },
-  {
-    "name": "Iván Delgado",
-    "email": "ivan21@example.com",
-    "active": true
-  },
-  {
-    "name": "Laura Campos",
-    "email": "laura22@example.com",
-    "active": false
-  },
-  {
-    "name": "Diego Cortés",
-    "email": "diego23@example.com",
-    "active": true
-  },
-  {
-    "name": "Mariana Silva",
-    "email": "mariana24@example.com",
-    "active": true
-  },
-  {
-    "name": "Gabriel Soto",
-    "email": "gabriel25@example.com",
-    "active": false
-  },
-  {
-    "name": "Regina Márquez",
-    "email": "regina26@example.com",
-    "active": true
-  },
-  {
-    "name": "Oscar Medina",
-    "email": "oscar27@example.com",
-    "active": true
-  },
-  {
-    "name": "Lucía Fuentes",
-    "email": "lucia28@example.com",
-    "active": false
-  },
-  {
-    "name": "Adrián Núñez",
-    "email": "adrian29@example.com",
-    "active": true
-  },
-  {
-    "name": "Claudia Reyes",
-    "email": "claudia30@example.com",
-    "active": true
-  },
-  {
-    "name": "Tomás Guerrero",
-    "email": "tomas31@example.com",
-    "active": false
-  },
-  {
-    "name": "Renata Lozano",
-    "email": "renata32@example.com",
-    "active": true
-  },
-  {
-    "name": "Ángel Cabrera",
-    "email": "angel33@example.com",
-    "active": true
-  },
-  {
-    "name": "Ximena Ibarra",
-    "email": "ximena34@example.com",
-    "active": false
-  },
-  {
-    "name": "Emiliano Vera",
-    "email": "emiliano35@example.com",
-    "active": true
-  },
-  {
-    "name": "Brenda Maldonado",
-    "email": "brenda36@example.com",
-    "active": true
-  },
-  {
-    "name": "Sebastián León",
-    "email": "sebastian37@example.com",
-    "active": false
-  },
-  {
-    "name": "Daniel Ríos",
-    "email": "daniel38@example.com",
-    "active": true
-  },
-  {
-    "name": "Fabiola Cárdenas",
-    "email": "fabiola39@example.com",
-    "active": true
-  },
-  {
-    "name": "Pablo Esquivel",
-    "email": "pablo40@example.com",
-    "active": false
-  },
-  {
-    "name": "Karen Molina",
-    "email": "karen41@example.com",
-    "active": true
-  },
-  {
-    "name": "Mauricio Acosta",
-    "email": "mauriAc@example.com",
-    "active": true
-  },
-  {
-    "name": "Gloria Villalobos",
-    "email": "villaglob@example.com",
-    "active": false
-  },
-  {
-    "name": "Rodrigo Beltrán",
-    "email": "rodrigo44@example.com",
-    "active": true
-  },
-  {
-    "name": "Patricia Sandoval",
-    "email": "patricia45@example.com",
-    "active": true
-  },
+use survey_db
 
-]
+// =============================
+// INSERT SURVEY
+// =============================
+db.surveys.insertOne({
+  survey_id: "S1",
+  titulo: "Examen Diagnóstico Matemáticas",
+  tema: "Álgebra básica",
+  grado: "3° Secundaria",
+  activa: true
+})
+
+
+// =============================
+// INSERT QUESTIONS
+// =============================
+db.questions.insertMany([
+  {
+    question_id: "Q1",
+    enunciado: "¿Cuánto es 2 + 2?",
+    tipo: "multiple",
+    puntos: 5,
+    obligatoria: true,
+    survey_id: "S1"
+  },
+  {
+    question_id: "Q2",
+    enunciado: "¿Cuánto es 5 x 3?",
+    tipo: "multiple",
+    puntos: 5,
+    obligatoria: true,
+    survey_id: "S1"
+  }
+])
+
+
+// =============================
+// INSERT OPTIONS
+// =============================
+db.options.insertMany([
+  { option_id: "O1", texto: "3", es_correcta: false, question_id: "Q1" },
+  { option_id: "O2", texto: "4", es_correcta: true, question_id: "Q1" },
+  { option_id: "O3", texto: "5", es_correcta: false, question_id: "Q1" },
+
+  { option_id: "O4", texto: "10", es_correcta: false, question_id: "Q2" },
+  { option_id: "O5", texto: "15", es_correcta: true, question_id: "Q2" },
+  { option_id: "O6", texto: "20", es_correcta: false, question_id: "Q2" }
+])
+
+
+// =============================
+// INSERT RESPONSES
+// =============================
+db.responses.insertMany([
+  {
+    response_id: "R1",
+    nombre_alumno: "Andrea Castillo",
+    fecha_entrega: new Date(),
+    calificacion_total: 10,
+    survey_id: "S1"
+  },
+  {
+    response_id: "R2",
+    nombre_alumno: "Luis Mendoza",
+    fecha_entrega: new Date(),
+    calificacion_total: 5,
+    survey_id: "S1"
+  }
+])
+
+
+// =============================
+// INSERT ANSWERS
+// =============================
+db.answers.insertMany([
+  {
+    answer_id: "A1",
+    opcion_seleccionada: "4",
+    es_correcta: true,
+    question_id: "Q1",
+    response_id: "R1"
+  },
+  {
+    answer_id: "A2",
+    opcion_seleccionada: "15",
+    es_correcta: true,
+    question_id: "Q2",
+    response_id: "R1"
+  },
+  {
+    answer_id: "A3",
+    opcion_seleccionada: "3",
+    es_correcta: false,
+    question_id: "Q1",
+    response_id: "R2"
+  },
+  {
+    answer_id: "A4",
+    opcion_seleccionada: "10",
+    es_correcta: false,
+    question_id: "Q2",
+    response_id: "R2"
+  }
+])
+
+print("Survey seeding completed successfully!")
