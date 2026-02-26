@@ -1,115 +1,57 @@
-const { MongoClient } = require("mongodb");
-
-const uri = "TU_URI_DE_MONGODB";
-const client = new MongoClient(uri);
-
-async function seedDatabase() {
-  try {
-    await client.connect();
-    const db = client.db("survey_db");
-
-    const surveys = db.collection("surveys");
-    const questions = db.collection("questions");
-    const options = db.collection("options");
-    const responses = db.collection("responses");
-    const answers = db.collection("answers");
-
-    // ===== SURVEY =====
-    await surveys.insertOne({
-      survey_id: "S1",
-      titulo: "Examen Diagnóstico Matemáticas",
-      tema: "Álgebra básica",
-      grado: "3° Secundaria",
-      activa: true
-    });
-
-    // ===== QUESTIONS =====
-    await questions.insertMany([
-      {
-        question_id: "Q1",
-        enunciado: "¿Cuánto es 2 + 2?",
-        tipo: "multiple",
-        puntos: 5,
-        obligatoria: true,
-        survey_id: "S1"
-      },
-      {
-        question_id: "Q2",
-        enunciado: "¿Cuánto es 5 x 3?",
-        tipo: "multiple",
-        puntos: 5,
-        obligatoria: true,
-        survey_id: "S1"
-      }
-    ]);
-
-    // ===== OPTIONS =====
-    await options.insertMany([
-      { option_id: "O1", texto: "3", es_correcta: false, question_id: "Q1" },
-      { option_id: "O2", texto: "4", es_correcta: true, question_id: "Q1" },
-      { option_id: "O3", texto: "5", es_correcta: false, question_id: "Q1" },
-
-      { option_id: "O4", texto: "10", es_correcta: false, question_id: "Q2" },
-      { option_id: "O5", texto: "15", es_correcta: true, question_id: "Q2" },
-      { option_id: "O6", texto: "20", es_correcta: false, question_id: "Q2" }
-    ]);
-
-    // ===== RESPONSES =====
-    await responses.insertMany([
-      {
-        response_id: "R1",
-        nombre_alumno: "Andrea Castillo",
-        fecha_entrega: new Date(),
-        calificacion_total: 10,
-        survey_id: "S1"
-      },
-      {
-        response_id: "R2",
-        nombre_alumno: "Luis Mendoza",
-        fecha_entrega: new Date(),
-        calificacion_total: 5,
-        survey_id: "S1"
-      }
-    ]);
-
-    // ===== ANSWERS =====
-    await answers.insertMany([
-      {
-        answer_id: "A1",
-        opcion_seleccionada: "4",
-        es_correcta: true,
-        question_id: "Q1",
-        response_id: "R1"
-      },
-      {
-        answer_id: "A2",
-        opcion_seleccionada: "15",
-        es_correcta: true,
-        question_id: "Q2",
-        response_id: "R1"
-      },
-      {
-        answer_id: "A3",
-        opcion_seleccionada: "3",
-        es_correcta: false,
-        question_id: "Q1",
-        response_id: "R2"
-      },
-      {
-        answer_id: "A4",
-        opcion_seleccionada: "10",
-        es_correcta: false,
-        question_id: "Q2",
-        response_id: "R2"
-      }
-    ]);
-
-    console.log("Survey seeding completed successfully!");
-  } catch (error) {
-    console.error(error);
-  } finally {
-    await client.close();
-  }
+{
+  "surveys": [
+    {
+      "survey_id": "S1",
+      "titulo": "Examen Diagnóstico Matemáticas",
+      "tema": "Álgebra básica",
+      "grado": "3° Secundaria",
+      "activa": true
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q1",
+      "survey_id": "S1",
+      "enunciado": "¿Cuánto es 2 + 2?",
+      "tipo": "multiple",
+      "puntos": 5,
+      "obligatoria": true
+    },
+    {
+      "question_id": "Q2",
+      "survey_id": "S1",
+      "enunciado": "¿Cuánto es 5 x 3?",
+      "tipo": "multiple",
+      "puntos": 5,
+      "obligatoria": true
+    }
+  ],
+  "options": [
+    {
+      "option_id": "O1",
+      "question_id": "Q1",
+      "texto": "3",
+      "correcta": false
+    },
+    {
+      "option_id": "O2",
+      "question_id": "Q1",
+      "texto": "4",
+      "correcta": true
+    },
+    {
+      "option_id": "O3",
+      "question_id": "Q2",
+      "texto": "15",
+      "correcta": true
+    },
+    {
+      "option_id": "O4",
+      "question_id": "Q2",
+      "texto": "10",
+      "correcta": false
+    }
+  ],
+  "responses": [],
+  "answers": []
 }
-
-seeds.json
