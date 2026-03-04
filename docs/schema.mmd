@@ -2,46 +2,76 @@ erDiagram
 
 SURVEY ||--o{ QUESTION : contiene
 QUESTION ||--o{ OPTION : tiene
-SURVEY ||--o{ RESPONSE : recibe
-RESPONSE ||--o{ ANSWER : incluye
-QUESTION ||--o{ ANSWER : es_contestada
 
 SURVEY {
-  string survey_id PK
-  string titulo
-  string tema
-  string grado
-  boolean activa
+string survey_id PK
+string titulo
+string tema
+string grado
+boolean activa
+
+S1
+"Encuesta sobre Uso de Tecnología"
+"Tecnología y estudio"
+"6°"
+true
 }
 
 QUESTION {
-  string question_id PK
-  string enunciado
-  string tipo
-  int puntos
-  boolean obligatoria
-  string survey_id FK
+string question_id PK
+string enunciado
+string tipo
+boolean obligatoria
+string survey_id FK
+
+Q1 "¿Cuántas horas al día usas el celular?" opcion_multiple true S1
+Q2 "¿Para qué usas más el internet?" opcion_multiple true S1
+Q3 "¿Tienes computadora en casa?" opcion_multiple true S1
+Q4 "¿Usas el celular para hacer tareas?" opcion_multiple true S1
+Q5 "¿Qué red social usas más?" opcion_multiple true S1
+Q6 "¿Prefieres clases virtuales o presenciales?" opcion_multiple true S1
+Q7 "¿Te distraes con el celular mientras estudias?" opcion_multiple true S1
+Q8 "¿Tienes acceso a WiFi en casa?" opcion_multiple true S1
+Q9 "¿Crees que la tecnología ayuda en el aprendizaje?" opcion_multiple true S1
 }
 
 OPTION {
-  string option_id PK
-  string texto
-  boolean es_correcta
-  string question_id FK
-}
+string option_id PK
+string texto
+string question_id FK
 
-RESPONSE {
-  string response_id PK
-  string nombre_alumno
-  date fecha_entrega
-  int calificacion_total
-  string survey_id FK
-}
+O1  "1-2 horas" Q1
+O2  "3-4 horas" Q1
+O3  "5-6 horas" Q1
+O4  "Más de 6 horas" Q1
 
-ANSWER {
-  string answer_id PK
-  string opcion_seleccionada
-  boolean es_correcta
-  string question_id FK
-  string response_id FK
+O5  "Redes sociales" Q2
+O6  "Tareas escolares" Q2
+O7  "Jugar en línea" Q2
+O8  "Ver videos" Q2
+
+O9  "Sí" Q3
+O10 "No" Q3
+
+O11 "Siempre" Q4
+O12 "A veces" Q4
+O13 "Nunca" Q4
+
+O14 "Facebook" Q5
+O15 "Instagram" Q5
+O16 "TikTok" Q5
+O17 "Otra" Q5
+
+O18 "Virtuales" Q6
+O19 "Presenciales" Q6
+
+O20 "Sí" Q7
+O21 "No" Q7
+
+O22 "Sí" Q8
+O23 "No" Q8
+
+O24 "Sí" Q9
+O25 "No" Q9
+O26 "Tal vez" Q9
 }
