@@ -1,44 +1,44 @@
 
 erDiagram
 
-    SURVEY ||--o{ QUESTION : contiene
-    QUESTION ||--o{ OPTION : tiene
-    SURVEY ||--o{ RESPONSE : recibe
-    RESPONSE ||--o{ ANSWER : incluye
-    QUESTION ||--o{ ANSWER : es_contestada
+    FORMULARIO ||--o{ ITEM : incluye
+    ITEM ||--o{ ALTERNATIVA : ofrece
+    FORMULARIO ||--o{ PARTICIPACION : genera
+    PARTICIPACION ||--o{ SELECCION : registra
+    ITEM ||--o{ SELECCION : corresponde
 
-    SURVEY {
-        string survey_id PK
-        string titulo
+    FORMULARIO {
+        string formulario_id PK
+        string nombre
+        string tema_principal
+        string audiencia
+        boolean disponible
+    }
+
+    ITEM {
+        string item_id PK
+        string pregunta_texto
+        string formato
+        boolean requerido
+        string formulario_id FK
+    }
+
+    ALTERNATIVA {
+        string alternativa_id PK
         string descripcion
-        string publico_objetivo
-        boolean activa
+        string item_id FK
     }
 
-    QUESTION {
-        string question_id PK
-        string enunciado
-        string tipo
-        boolean obligatoria
-        string survey_id FK
+    PARTICIPACION {
+        string participacion_id PK
+        string usuario
+        date fecha_envio
+        string formulario_id FK
     }
 
-    OPTION {
-        string option_id PK
-        string texto
-        string question_id FK
-    }
-
-    RESPONSE {
-        string response_id PK
-        string participante
-        date fecha_respuesta
-        string survey_id FK
-    }
-
-    ANSWER {
-        string answer_id PK
-        string opcion_elegida
-        string question_id FK
-        string response_id FK
+    SELECCION {
+        string seleccion_id PK
+        string respuesta_marcada
+        string item_id FK
+        string participacion_id FK
     }
