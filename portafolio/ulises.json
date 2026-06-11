@@ -1,1 +1,24 @@
-
+{
+  "personalInformation": {
+    "firstName": "Ulises",
+    "lastName": "Rojas Gonzalez",
+    "address": "Cordoba, Veracruz",
+    "age": 18,
+    "dateOfBirth": "2008-03-20",
+    "hobbies": [
+      "Music",
+      "Gaming",
+      "Technology"
+    ],
+    "friends": [
+      {
+        "firstName": "Jose Ignacio",
+        "lastName": "Oporto Hernandez"
+      },
+      {
+        "firstName": "Brayan",
+        "lastName": "Hernandez Jimenez"
+      }
+    ]
+  }
+}
