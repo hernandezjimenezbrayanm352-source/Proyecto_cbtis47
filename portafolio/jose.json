@@ -1,1 +1,24 @@
-
+{
+  "personalInformation": {
+    "firstName": "Jose Ignacio",
+    "lastName": "Oporto Hernandez",
+    "address": "Cordoba, Veracruz",
+    "age": 18,
+    "dateOfBirth": "2008-01-15",
+    "hobbies": [
+      "Reading",
+      "Technology",
+      "Sports"
+    ],
+    "friends": [
+      {
+        "firstName": "Ulises",
+        "lastName": "Rojas Gonzalez"
+      },
+      {
+        "firstName": "Brayan",
+        "lastName": "Hernandez Jimenez"
+      }
+    ]
+  }
+}
