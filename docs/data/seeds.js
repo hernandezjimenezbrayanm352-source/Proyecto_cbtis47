@@ -70,4 +70,4 @@ db.usuarios.insertMany([
   { usuario_id: "U048", nombre: "Usuario 48", correo: "usuario48@gmail.com", edad: 16 },
   { usuario_id: "U049", nombre: "Usuario 49", correo: "usuario49@gmail.com", edad: 17 },
   { usuario_id: "U050", nombre: "Usuario 50", correo: "usuario50@gmail.com", edad: 18 }
-])
+]) 
