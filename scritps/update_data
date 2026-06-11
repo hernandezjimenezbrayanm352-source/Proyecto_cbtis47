@@ -1,0 +1,62 @@
+# 🚀 Operaciones de Actualización y Mantenimiento - MongoDB
+
+Este documento presenta ejemplos de consultas **MQL (MongoDB Query Language)** utilizadas para mantener actualizada la información de usuarios, preguntas y formularios dentro del proyecto de encuestas.
+
+---
+
+## 1. Actualización de Correo Electrónico de un Usuario
+**Objetivo:** Mantener actualizada la información de contacto de los participantes de la encuesta.  
+**Campo utilizado:** `usuario_id` para localizar al usuario y `correo` para actualizar el valor.  
+**Colección:** `usuarios`
+
+```js
+db.usuarios.updateOne(
+  { usuario_id: "U001" },
+  { $set: { correo: "nuevo_correo@gmail.com" } }
+)
+2. Incremento de Edad del Usuario
+Objetivo: Actualizar automáticamente la edad de un participante cuando cumple años.
+Campo utilizado: usuario_id como identificador y edad para aplicar el incremento numérico (+1).
+Colección: usuarios
+
+js
+db.usuarios.updateOne(
+  { usuario_id: "U001" },
+  { $inc: { edad: 1 } }
+)
+3. Incorporación de una Nueva Alternativa de Respuesta
+Objetivo: Agregar nuevas opciones de respuesta a una pregunta existente sin eliminar las anteriores.
+Campo utilizado: item_id para relacionar la nueva alternativa con la pregunta correspondiente.
+Colección: alternativas
+
+js
+db.alternativas.insertOne({
+  alternativa_id: "A28",
+  descripcion: "Cursos en línea",
+  item_id: "I6"
+})
+4. Modificación del Texto de una Pregunta
+Objetivo: Corregir o mejorar la redacción de una pregunta del formulario.
+Campo utilizado: item_id para localizar la pregunta y pregunta_texto para actualizar su contenido.
+Colección: items
+
+js
+db.items.updateOne(
+  { item_id: "I1" },
+  {
+    $set: {
+      pregunta_texto: "¿Consideras que la tecnología mejora significativamente tu rendimiento académico?"
+    }
+  }
+)
+5. Cambio de Estado del Formulario
+Objetivo: Habilitar o deshabilitar la disponibilidad de una encuesta.
+Campo utilizado: formulario_id para localizar el formulario y disponible para modificar su estado.
+Colección: formularios
+
+js
+db.formularios.updateOne(
+  { formulario_id: "F1" },
+  { $set: { disponible: false } }
+)
+✨ Estas operaciones permiten mantener la base de datos actualizada y coherente, asegurando que la información de usuarios, preguntas, alternativas y formularios esté siempre lista para su análisis y visualización en la interfaz de usuario.
