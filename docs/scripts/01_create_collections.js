@@ -1,3 +1,4 @@
+
 db.items.insertMany([
 {
   item_id: "I1",
