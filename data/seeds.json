@@ -1,0 +1,82 @@
+[
+  {
+    "usuario": {
+      "usuario_id": "U001",
+      "nombre": "Jose Ignacio Oporto Hernandez",
+      "correo": "jose.oporto@gmail.com",
+      "edad": 18
+    },
+    "participacion": {
+      "participacion_id": "P001",
+      "fecha_envio": "2026-06-10"
+    },
+    "respuesta": {
+      "pregunta": "¿Consideras que la tecnología mejora tu rendimiento académico?",
+      "respuesta_marcada": "Sí, mucho"
+    }
+  },
+  {
+    "usuario": {
+      "usuario_id": "U002",
+      "nombre": "Ulises Rojas Gonzalez",
+      "correo": "ulises.rojas@gmail.com",
+      "edad": 18
+    },
+    "participacion": {
+      "participacion_id": "P002",
+      "fecha_envio": "2026-06-10"
+    },
+    "respuesta": {
+      "pregunta": "¿Cuántas horas al día utilizas dispositivos tecnológicos para estudiar?",
+      "respuesta_marcada": "3 a 4 horas"
+    }
+  },
+  {
+    "usuario": {
+      "usuario_id": "U003",
+      "nombre": "Andrea Martinez",
+      "correo": "andrea.martinez@gmail.com",
+      "edad": 17
+    },
+    "participacion": {
+      "participacion_id": "P003",
+      "fecha_envio": "2026-06-11"
+    },
+    "respuesta": {
+      "pregunta": "¿Has tomado clases en línea como apoyo a tus estudios?",
+      "respuesta_marcada": "Sí"
+    }
+  },
+  {
+    "usuario": {
+      "usuario_id": "U004",
+      "nombre": "Carlos Ramirez",
+      "correo": "carlos.ramirez@gmail.com",
+      "edad": 16
+    },
+    "participacion": {
+      "participacion_id": "P004",
+      "fecha_envio": "2026-06-11"
+    },
+    "respuesta": {
+      "pregunta": "¿Prefieres estudiar con recursos digitales o con libros físicos?",
+      "respuesta_marcada": "Ambos"
+    }
+  },
+  {
+    "usuario": {
+      "usuario_id": "U005",
+      "nombre": "Fernanda Lopez",
+      "correo": "fernanda.lopez@gmail.com",
+      "edad": 17
+    },
+    "participacion": {
+      "participacion_id": "P005",
+      "fecha_envio": "2026-06-11"
+    },
+    "respuesta": {
+      "pregunta": "¿La tecnología facilita la comunicación con tus profesores?",
+      "respuesta_marcada": "Sí, facilita mucho"
+    }
+  }
+]
